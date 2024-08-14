@@ -1,9 +1,12 @@
 import json
 
-with open("dados.json", "r") as file:
-    data = json.load(file)
+data = {
+    "nome": "João",
+    "idade": 30,
+    "email": "joao@email.com"
+}
 
-data["nome"] = "wallace barros"
+json_data = json.dumps(data)
 
-with open("dados.json", "w") as file:
-    json.dump(data, file)
+with open("novos_dados.json", "w") as file:
+    file.write(json_data)
