@@ -1,10 +1,4 @@
 import json
 
-data = {
-    "name":"wallace",
-    "idade":21
-}
-
-json_data = json.dumps(data)
-
-print(json_data)
+json_data = '{"nome":"wallace", "idade":21}'
+data = json.loads(json_data)
