@@ -1,4 +1,6 @@
 import json
 
-json_data = '{"nome":"wallace", "idade":21}'
-data = json.loads(json_data)
+with open("dados.json", "r") as target:
+    data = json.load(target)
+
+print(data["nome"])
